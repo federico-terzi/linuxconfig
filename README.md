@@ -93,7 +93,11 @@ prompt_context() {}
 
 # Setup VIM
 
-TODO
+Copy the `vimrc` file in this repository to `~/.vimrc`
+
+```
+cp vimrc ~/.vimrc
+```
 
 # Setup Github SSH auth 
 
@@ -119,7 +123,19 @@ If you need to change from HTTPS remote origin to SSH based one, use this comman
 git remote set-url origin git@github.com:federico-terzi/linuxconfig.git
 ```
 
-# Other useful tools
+# Installing Google Chrome
+
+Navigate to the [Chrome Download page](https://www.google.com/chrome/) and download
+the 64 bit DEB package.
+
+Then to install it:
+
+```
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+```
+
+
+# Install Redshift to for night-shift 
 
 Install redshift to remove blue light color that may strain eyes:
 
