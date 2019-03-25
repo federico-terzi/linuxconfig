@@ -110,6 +110,14 @@ ssh-add ~/.ssh/id_rsa
 Now we need to copy the public key ( found at `~/.ssh/id_rsa.pub` ) and add it to
 the list of trusted keys on [Github Settings](https://github.com/settings/keys)
 
+**Make sure to utilize SSH cloning with github, and not HTTPS.**
+Using HTTPS will ask for user and password every time and ssh keys will not work.
+
+If you need to change from HTTPS remote origin to SSH based one, use this command:
+
+```
+git remote set-url origin git@github.com:federico-terzi/linuxconfig.git
+```
 
 # Other useful tools
 
