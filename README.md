@@ -66,7 +66,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 At this point copy the zshrc in this repository to the ~/.zshrc file.
 
-** At this point, logout and login again to complete the installation **
+**At this point, logout and login again to complete the installation**
 
 In particular, this file has the following modifications:
 
@@ -80,7 +80,7 @@ In order for it to work, we also need to install the [Powerpack fonts](https://g
 sudo apt install -y fonts-powerline
 ```
 
-** A logout is needed for changes to take effect **
+**A logout is needed for changes to take effect**
 
 ### Remove the user/machine
 
@@ -92,6 +92,23 @@ prompt_context() {}
 ```
 
 # Setup VIM
+
+TODO
+
+# Setup Github SSH auth 
+
+We first need to generate a valid RSA pair using ssh-keygen ( press enter
+to all the answers ) and then add it to the ssh agent.
+
+```
+ssh-keygen -t rsa -b 4096
+
+ssh-agent /bin/sh
+ssh-add ~/.ssh/id_rsa
+```
+
+Now we need to copy the public key ( found at `~/.ssh/id_rsa.pub` ) and add it to
+the list of trusted keys on [Github Settings](https://github.com/settings/keys)
 
 
 # Other useful tools
