@@ -134,6 +134,20 @@ Then to install it:
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
+# Install GIMP
+
+To install GIMP, we will use `flatpak`, according to the [instructions](https://www.gimp.org/downloads/)
+
+```
+sudo apt install flatpak
+sudo flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+```
+
+To launch GIMP, use the following command:
+
+```
+flatpak run org.gimp.GIMP//stable
+```
 
 # Install Redshift to for night-shift 
 
