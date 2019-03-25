@@ -1,4 +1,7 @@
-# Setup Wifi
+This repository contains the configuration files to setup my favourite linux environment.
+I keep them as a reference when I need to setup a new machine.
+
+# Setup wifi TPLink Archer T9E
 
 In order to setup the TPLink Archer T9E Wifi Card, you need a valid internet connection.
 To do so I set up a router in WDS mode to convert the Wifi signal into ethernet.
@@ -45,6 +48,51 @@ sudo apt install arandr
 Then we need to launch it and then setup monitor ordering as wanted. Then save the
 screenlayout file. Inside this file there will be the xrandr script that set up
 the monitors.
+
+# Setup ZSH
+
+In order to setup zsh, we have to install it first:
+
+```
+sudo apt install -y zsh
+```
+
+Then we can download the [Oh My SH package](https://github.com/robbyrussell/oh-my-zsh)
+using this command:
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+At this point copy the zshrc in this repository to the ~/.zshrc file.
+
+** At this point, logout and login again to complete the installation **
+
+In particular, this file has the following modifications:
+
+### Agnoster theme
+
+I like the *agnoster* theme, to change that edit the ZSH\_THEME variable.
+
+In order for it to work, we also need to install the [Powerpack fonts](https://github.com/powerline/fonts), using this command:
+
+```
+sudo apt install -y fonts-powerline
+```
+
+** A logout is needed for changes to take effect **
+
+### Remove the user/machine
+
+I don't like the user@machine in my shell. To remove it, we need to change the .zshrc
+file and add the following line:
+
+```
+prompt_context() {}
+```
+
+# Setup VIM
+
 
 # Other useful tools
 
