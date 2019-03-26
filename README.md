@@ -74,6 +74,28 @@ cp i3status ~/.config/i3status/config
 
 Then we need to reload it using `WIN+SHIFT+r`
 
+## Setup Keyboard layout switching
+
+In order to setup keyboard layout switching with WIN+SPACE, I used [this](https://github.com/porras/i3-keyboard-layout) script. It's already included in this repository, but
+we may need to make it executable using chmod.
+
+Then, if you are starting from scratch with the i3 config file, you need to make
+the following modifications:
+
+```
+# Comment the binding already present for the $mod+space
+
+# Add the following binding:
+bindsym $mod+space exec ~/linuxconfig/i3-keyboard-layout cycle us it
+
+# And then, modify the bar function to include i3-keyboard-layout
+bar {
+	status_command i3status | ~/linuxconfig/i3-keyboard-layout i3status
+}
+
+```
+
+
 # Setup ZSH
 
 In order to setup zsh, we have to install it first:
