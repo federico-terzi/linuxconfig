@@ -190,11 +190,15 @@ sudo apt install flatpak
 sudo flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
 ```
 
-To launch GIMP, use the following command:
+To launch GIMP, we need to copy the `gimp` script present in this repository into the
+`/usr/local/bin` folder:
 
 ```
-flatpak run org.gimp.GIMP//stable
+sudo cp gimp /usr/local/bin/gimp
+sudo chmod +x /usr/local/bin/gimp
 ```
+
+Now we can start gimp from dmenu by searching "gimp".
 
 # Install Redshift to for night-shift 
 
