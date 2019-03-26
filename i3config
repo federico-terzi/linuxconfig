@@ -129,6 +129,7 @@ bindsym $mod+F2 exec --no-startup-id redshift -O 4000
 bindsym $mod+F5 exec --no-startup-id google-chrome
 bindsym $mod+F12 exec --no-startup-id google-chrome --incognito && pactl set-sink-volume 0 10%
 bindsym $mod+F6 exec --no-startup-id telegram-desktop
+bindsym $mod+F7 exec --no-startup-id thunar
 bindsym $mod+space exec ~/linuxconfig/i3-keyboard-layout cycle us it
 
 # resize window (you can also use the mouse for that)

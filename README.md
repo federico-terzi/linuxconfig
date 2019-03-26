@@ -95,6 +95,20 @@ bar {
 
 ```
 
+# Setup Thunar file manager
+
+Sometimes it's useful to navigate files using a GUI rather than the command line.
+Because my base distro of linux is Xubuntu, I use Thunar as a file manager.
+
+The problem is that when installing i3, most of the icons are not visible. To
+solve the problem, we will need `lxappearance`:
+
+```
+sudo apt install lxappearance
+```
+
+Then we can select another theme, for example `Adawaita-dark`, and another
+icon theme, for example `elementary Xfce`.
 
 # Setup ZSH
 
