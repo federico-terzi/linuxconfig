@@ -187,3 +187,12 @@ Then to run it, just type:
 redshift -O 3000  # Note that 3000 is the color temperature
 ```
 
+### Keybindings
+
+In my custom i3 config, I assigned the following key binding to change the
+redshift on the go:
+
+* WIN+F1 > Set the temperature to 3000k
+* WIN+F2 > Set the temperature to 4000k
+* WIN+Shift+F1 > Remove red filter
+
