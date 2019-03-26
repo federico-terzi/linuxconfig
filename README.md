@@ -49,6 +49,30 @@ Then we need to launch it and then setup monitor ordering as wanted. Then save t
 screenlayout file. Inside this file there will be the xrandr script that set up
 the monitors.
 
+## Setup media keys and status bar
+
+We need to make a few changes to the i3 configuration to enable media keys and
+we also need to change i3status configuration to show the current volume level.
+
+In the `~/.config/i3/config` file add the following lines:
+
+```
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+```
+
+Then we need to modify the i3status configuration, so copy the i3status config file in
+the home:
+
+```
+mkdir ~/.config/i3status
+cp i3status ~/.config/i3status/config
+```
+
+Then we need to reload it using `WIN+SHIFT+r`
+
 # Setup ZSH
 
 In order to setup zsh, we have to install it first:
