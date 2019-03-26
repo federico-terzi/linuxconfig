@@ -178,7 +178,7 @@ the 64 bit DEB package.
 Then to install it:
 
 ```
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable\_current\_amd64.deb
 ```
 
 # Install GIMP
@@ -218,4 +218,53 @@ redshift on the go:
 * WIN+F1 > Set the temperature to 3000k
 * WIN+F2 > Set the temperature to 4000k
 * WIN+Shift+F1 > Remove red filter
+
+# Install Dropbox
+
+To install Dropbox, i followed [this guide](https://linoxide.com/linux-how-to/install-dropbox-ubuntu/)
+
+Basically, these are the steps:
+
+```
+# Download dropbox
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+
+# Start the daemon
+~/.dropbox-dist/dropboxd
+```
+
+At this point the browser will open to login into the Dropbox account. After that,
+dropbox should start synchronizing all the files in the Dropbox folder.
+
+Now we need to install the Dropbox cli:
+
+```
+sudo wget -O /usr/local/bin/dropbox "https://www.dropbox.com/download?dl=packages/dropbox.py"
+
+sudo chmod +x /usr/local/bin/dropbox
+
+# Now to check the status of dropbox, we can type:
+
+dropbox status
+```
+
+To make dropbox start automatically at system startup, we need to add it as a service:
+
+Copy the `dropbox.service` file of this repository into the systemd folder:
+
+```
+# If your user/group is not freddy, we will need to change it in this file.
+sudo cp dropbox.service /etc/systemd/system/dropbox.service
+```
+
+We now need to configure systemd:
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable dropbox
+sudo systemctl status dropbox
+```
+
+
+
 
