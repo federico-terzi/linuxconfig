@@ -39,5 +39,4 @@
     mode: "a+x"
 
 - name: Install telegram desktop
-  snap:
-    name: telegram-desktop
+  command: snap install telegram-desktop
