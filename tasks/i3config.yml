@@ -14,9 +14,17 @@
     state: absent
     path: "~/.config/i3status/config"
 
+- name: Create i3 status folder
+  file:
+    path: "~/.config/i3status"
+    recurse: yes
+    state: directory
+
 - name: Create i3 status symbolic link
   file:
     src: "~/linuxconfig/config/i3status"
     dest: "~/.config/i3status/config"
     state: link
- 
+
+- name: Reload i3 config
+  command: i3-msg reload 
