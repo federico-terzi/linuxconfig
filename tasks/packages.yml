@@ -36,5 +36,4 @@
   copy:
     src: "~/linuxconfig/script/gimp"
     dest: "/usr/local/bin/gimp"
-    state: link
-
+    mode: "a+x"
