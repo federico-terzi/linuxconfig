@@ -1,0 +1,10 @@
+- name: Remove previous vim configuration
+  file:
+    state: absent
+    path: "~/.vimrc"
+
+- name: Create vimrc symbolic link
+  file:
+    src: "~/linuxconfig/config/vimrc"
+    dest: "~/.vimrc"
+    state: link

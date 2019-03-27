@@ -1,0 +1,16 @@
+- name: Download Oh My SH package
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+- name: Install Powerpack fonts
+  apt: name=fonts-powerline
+
+- name: Remove previous zsh configuration
+  file:
+    state: absent
+    path: "~/.zshrc"
+
+- name: Create zshrc symbolic link
+  file:
+    src: "~/linuxconfig/config/zshrc"
+    dest: "~/.zshrc"
+    state: link

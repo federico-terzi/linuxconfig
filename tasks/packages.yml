@@ -1,0 +1,40 @@
+- name: Install vim
+  apt: name=vim
+
+- name: Install i3
+  apt: name=i3
+
+- name: Install arandr
+  apt: name=arandr
+
+- name: Install LXappearance
+  apt: name=lxappearance
+
+- name: Install ZSH
+  apt: name=zsh
+
+- name: Install flatpak
+  apt: name=flatpak
+
+- name: Install redshift
+  apt: name=redshift 
+
+- name: Download google chrome
+  get_url:
+    url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    dest: "~/Downloads/chrome.deb"
+
+- name: Install google chrome
+  apt:
+    deb: "~/Downloads/chrome.deb"
+
+- name: Install gimp
+  flatpak:
+    name: https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+
+- name: Create gimp launcher
+  copy:
+    src: "~/linuxconfig/script/gimp"
+    dest: "/usr/local/bin/gimp"
+    state: link
+

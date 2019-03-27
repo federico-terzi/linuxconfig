@@ -1,0 +1,11 @@
+- name: Remove previous i3 configuration
+  file:
+    state: absent
+    path: "~/.config/i3/config"
+
+- name: Create i3 symbolic link
+  file:
+    src: "~/linuxconfig/config/i3config"
+    dest: "~/.config/i3/config"
+    state: link
+  
