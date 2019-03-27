@@ -1,5 +1,11 @@
-- name: Download Oh My SH package
-  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+- name: Download Oh My SH installation script
+  get_url:
+    url: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    dest: "/tmp/installzsh.sh"
+    mode: "a+x"
+
+- name: Install Oh My SH:
+  command: sh /tmp/installzsh.sh
 
 - name: Install Powerpack fonts
   apt: name=fonts-powerline
