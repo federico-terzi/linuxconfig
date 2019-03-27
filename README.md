@@ -1,6 +1,8 @@
 This repository contains the configuration files to setup my favourite linux environment.
 I keep them as a reference when I need to setup a new machine.
 
+I use Ansible to manage all my packages and configurations.
+
 # Quick start
 
 A quick way to get started is using this bootstrap:
