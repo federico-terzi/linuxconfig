@@ -5,7 +5,9 @@ I keep them as a reference when I need to setup a new machine.
 
 A quick way to get started is using this bootstrap:
 
+```
 sh -c "$(curl -sSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+```
 
 # Wifi
 
