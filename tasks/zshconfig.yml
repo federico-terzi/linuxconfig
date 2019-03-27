@@ -4,7 +4,7 @@
     dest: "/tmp/installzsh.sh"
     mode: "a+x"
 
-- name: Install Oh My SH:
+- name: Install Oh My SH
   command: sh /tmp/installzsh.sh
 
 - name: Install Powerpack fonts
