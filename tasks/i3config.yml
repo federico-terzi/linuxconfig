@@ -8,4 +8,15 @@
     src: "~/linuxconfig/config/i3config"
     dest: "~/.config/i3/config"
     state: link
-  
+
+- name: Remove previous i3status configuration
+  file:
+    state: absent
+    path: "~/.config/i3status/config"
+
+- name: Create i3 status symbolic link
+  file:
+    src: "~/linuxconfig/config/i3status"
+    dest: "~/.config/i3status/config"
+    state: link
+ 
