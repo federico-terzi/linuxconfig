@@ -22,4 +22,4 @@
     state: link
 
 - name: Set ZSH as the default shell
-  shell: "chsh -s $(which zsh) freddy"
+  shell: "chsh -s /bin/zsh freddy"
