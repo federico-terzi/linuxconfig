@@ -20,3 +20,6 @@
     src: "~/linuxconfig/config/zshrc"
     dest: "~/.zshrc"
     state: link
+
+- name: Set ZSH as the default shell
+  shell: "chsh -s $(which zsh)"

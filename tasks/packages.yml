@@ -37,3 +37,7 @@
     src: "~/linuxconfig/script/gimp"
     dest: "/usr/local/bin/gimp"
     mode: "a+x"
+
+- name: Install telegram desktop
+  snap:
+    name: telegram-desktop
