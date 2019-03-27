@@ -1,7 +1,21 @@
 This repository contains the configuration files to setup my favourite linux environment.
 I keep them as a reference when I need to setup a new machine.
 
-# Setup wifi TPLink Archer T9E
+# Quick start
+
+A quick way to get started is using this bootstrap:
+
+sh -c "$(curl -sSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+
+# Wifi
+
+To connect to a wifi network using the terminal, we can use this command:
+
+```
+nmcli d wifi connect "WIFINAME" password "PASSWORD"
+```
+
+## Setup wifi TPLink Archer T9E
 
 In order to setup the TPLink Archer T9E Wifi Card, you need a valid internet connection.
 To do so I set up a router in WDS mode to convert the Wifi signal into ethernet.
@@ -33,9 +47,6 @@ right of the login screen.
 We now need to setup monitor ordering correctly, if you are using a known setup, search
 for the correct screenlayout file in this repository, read the next section otherwise.
 
-Copy the i3config file in this repository to the `~/.config/i3/config`
-
-
 ### Using arandr to setup monitor ordering
 
 Now we need to setup monitor ordering, for this task we will use `arandr`, so let's 
@@ -62,14 +73,6 @@ bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-```
-
-Then we need to modify the i3status configuration, so copy the i3status config file in
-the home:
-
-```
-mkdir ~/.config/i3status
-cp i3status ~/.config/i3status/config
 ```
 
 Then we need to reload it using `WIN+SHIFT+r`
@@ -156,10 +159,6 @@ prompt_context() {}
 
 Copy the `vimrc` file in this repository to `~/.vimrc`
 
-```
-cp vimrc ~/.vimrc
-```
-
 # Setup Github SSH auth 
 
 We first need to generate a valid RSA pair using ssh-keygen ( press enter
@@ -192,7 +191,7 @@ the 64 bit DEB package.
 Then to install it:
 
 ```
-sudo dpkg -i google-chrome-stable\_current\_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
 # Install GIMP

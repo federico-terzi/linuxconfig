@@ -27,4 +27,4 @@
     state: link
 
 - name: Reload i3 config
-  command: i3-msg reload 
+  command: i3-msg restart 
