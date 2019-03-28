@@ -177,7 +177,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 # Specific monitor setup
 exec --no-startup-id ~/.setupmonitor.sh
 
-exec --no-startup-id feh --bg-fill ~/linuxconfig/images/background.jpg
+exec_always --no-startup-id feh --bg-fill ~/linuxconfig/images/background.jpg
 
 exec --no-startup-id redshift -O 3000
 exec --no-startup-id xsetroot -solid "#000000" 
