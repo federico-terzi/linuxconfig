@@ -32,4 +32,4 @@
   command: systemctl daemon-reload
 
 - debug:
-    msg: "To finish configuring dropbox, you must run: sudo systemctl enable dropbox"
+    msg: "To finish configuring dropbox, you must run: sudo systemctl enable dropbox && sudo systemctl start dropbox"
