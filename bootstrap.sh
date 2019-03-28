@@ -1,5 +1,3 @@
-#!/bin/bash
-
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit
@@ -18,7 +16,14 @@ apt install -y ansible
 
 echo "Getting the repository..."
 
-git clone https://github.com/federico-terzi/linuxconfig.git
+if [ -d "~/linuxconfig" ] ; then
+    echo "Repository already exist, pulling the latest version..."
+    cd ~/linuxconfig
+    git pull
+    cd ..
+else
+    git clone https://github.com/federico-terzi/linuxconfig.git
+fi
 
 echo "Starting Ansible..."
 

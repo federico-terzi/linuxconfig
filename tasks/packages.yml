@@ -10,6 +10,9 @@
 - name: Install arandr
   apt: name=arandr
 
+- name: Install feh
+  apt: name=feh
+
 - name: Install LXappearance
   apt: name=lxappearance
 
