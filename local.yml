@@ -10,3 +10,4 @@
     - include: tasks/i3config.yml
     - include: tasks/zshconfig.yml
     - include: tasks/vimconfig.yml
+    - include: tasks/dropbox.yml

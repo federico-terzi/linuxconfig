@@ -1,0 +1,35 @@
+- name: Download dropbox distribution
+  get_url:
+    url: https://www.dropbox.com/download?plat=lnx.x86_64
+    dest: "~/Downloads/dropbox.tar.gz"
+
+- name: Unzip dropbox distribution
+  unarchive:
+    src: "~/Downloads/dropbox.tar.gz"
+    dest: "~/"
+
+- debug:
+    msg: "Dropbox must be configured, run ~/.dropbox-dist/dropboxd"
+
+- name: Download dropbox cli
+  get_url:
+    url: https://www.dropbox.com/download?dl=packages/dropbox.py
+    dest: /usr/local/bin/dropbox
+    mode: a+x
+
+- name: Remove previous dropbox link
+  file:
+    state: absent
+    path: "/etc/systemd/system/dropbox.service"
+
+- name: Link dropbox service
+  file:
+    src: "~/linuxconfig/config/dropbox.service"
+    dest: "/etc/systemd/system/dropbox.service"
+    state: "link"
+
+- name: Reconfigure Systemctl
+  command: systemctl daemon-reload
+
+- debug:
+    msg: "To finish configuring dropbox, you must run: sudo systemctl enable dropbox"
