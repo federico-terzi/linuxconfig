@@ -28,3 +28,5 @@
 
 - name: Reload i3 config
   command: i3-msg restart 
+  failed_when: false
+  changed_when: false 
