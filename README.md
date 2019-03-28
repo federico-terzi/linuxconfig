@@ -8,7 +8,7 @@ I use Ansible to manage all my packages and configurations.
 A quick way to get started is using this bootstrap:
 
 ```
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
 ```
 
 If you want to install also custom additions, based on the current computer, you can
@@ -18,17 +18,17 @@ These are useful to setup custom monitor setups and install specific patches.
 
 #### Laptop configuration
 ```
-LAPTOP=true sudo -E sh -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+LAPTOP=true sudo -E bash -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
 ```
 
 #### Bologna configuration
 ```
-BOLOGNA=true sudo -E sh -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+BOLOGNA=true sudo -E bash -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
 ```
 
 #### Sangiovanni configuration
 ```
-SANGIO=true sudo -E sh -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+SANGIO=true sudo -E bash -c "$(curl -fsSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
 ```
 
 # Wifi
