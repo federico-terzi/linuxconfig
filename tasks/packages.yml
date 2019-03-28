@@ -40,3 +40,6 @@
 
 - name: Install telegram desktop
   command: snap install telegram-desktop
+
+- name: Install bitwarden
+  command: snap install bitwarden
