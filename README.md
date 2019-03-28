@@ -72,14 +72,39 @@ we also need to change i3status configuration to show the current volume level.
 In the `~/.config/i3/config` file add the following lines:
 
 ```
+# Volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 ```
 
 Then we need to reload it using `WIN+SHIFT+r`
+
+### Control brightness
+
+To control brightness, we have to install `xbacklight` and enable the intel backlight:
+
+```
+sudo apt install -y xbacklight
+```
+
+And then create the file: `/etc/X11/xorg.conf` with the following content:
+
+```
+Section "Device"
+    Identifier  "Intel Graphics" 
+    Driver      "intel"
+    Option      "Backlight"  "intel_backlight"
+EndSection
+```
+
+**A logout is required for this to take effect**
 
 ## Setup Keyboard layout switching
 

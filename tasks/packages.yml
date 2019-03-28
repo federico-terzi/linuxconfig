@@ -4,6 +4,9 @@
 - name: Install i3
   apt: name=i3
 
+- name: Install xbacklight
+  apt: name=xbacklight
+
 - name: Install arandr
   apt: name=arandr
 

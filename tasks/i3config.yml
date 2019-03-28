@@ -26,6 +26,13 @@
     dest: "~/.config/i3status/config"
     state: link
 
+- name: Install patch for intel backlight
+  file:
+    src: "~/linuxconfig/config/xorg.conf"
+    dest: "/etc/X11/xorg.conf"
+    state: link
+  when: "'LAPTOP' in ansible_env"
+
 - name: Reload i3 config
   command: i3-msg restart 
   failed_when: false

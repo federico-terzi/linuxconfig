@@ -170,11 +170,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-exec --no-startup-id xrandr --output DP-1 --mode 1366x768 --pos 0x176 --rotate normal --output HDMI-3 --off --output HDMI-2 --mode 1680x1050 --pos 3286x30 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-workspace 1 output DP-1
-workspace 2 output HDMI-1
-workspace 3 output HDMI-2
+exec --no-startup-id xrandr --output DP-1 --mode 1366x768 --pos 0x176 --rotate normal --output HDMI-3 --off --output HDMI-2 --mode 1680x1050 --pos 3286x30 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal workspace 1 output DP-1 workspace 2 output HDMI-1 workspace 3 output HDMI-2
 
 exec --no-startup-id redshift -O 3000
 exec --no-startup-id xsetroot -solid "#000000" 
