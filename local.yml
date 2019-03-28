@@ -11,3 +11,4 @@
     - include: tasks/zshconfig.yml
     - include: tasks/vimconfig.yml
     - include: tasks/dropbox.yml
+    - include: tasks/monitor.yml

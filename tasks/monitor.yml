@@ -1,0 +1,14 @@
+- name: Setup noop default monitor configuration
+  file:
+    src: "~/linuxconfig/script/noop.sh"
+    dest: "~/.setupmonitor.sh"
+    mode: "a+x"
+    state: "link"
+
+- name: Configuring Bologna monitor configuration
+  file:
+    src: "~/linuxconfig/script/screenlayoutbologna.sh"
+    dest: "~/.setupmonitor.sh"
+    mode: "a+x"
+    state: "link"
+  when: "'BOLOGNA' in ansible_env"

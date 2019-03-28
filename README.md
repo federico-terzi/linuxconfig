@@ -11,6 +11,26 @@ A quick way to get started is using this bootstrap:
 sudo sh -c "$(curl -sSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
 ```
 
+If you want to install also custom additions, based on the current computer, you can
+specify it using Environmental variables ( don't forget -E flag on sudo ).
+
+These are useful to setup custom monitor setups and install specific patches.
+
+#### Laptop configuration
+```
+LAPTOP=true sudo -E sh -c "$(curl -sSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+```
+
+#### Bologna configuration
+```
+BOLOGNA=true sudo -E sh -c "$(curl -sSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+```
+
+#### Sangiovanni configuration
+```
+SANGIO=true sudo -E sh -c "$(curl -sSL https://raw.githubusercontent.com/federico-terzi/linuxconfig/master/bootstrap.sh)"
+```
+
 # Wifi
 
 To connect to a wifi network using the terminal, we can use this command:
