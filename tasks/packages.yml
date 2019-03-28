@@ -49,3 +49,6 @@
 
 - name: Install bitwarden
   command: snap install bitwarden
+
+- name: Install Slack 
+  command: snap install slack --classic 
