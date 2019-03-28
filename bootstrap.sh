@@ -16,7 +16,7 @@ apt install -y ansible
 
 echo "Getting the repository..."
 
-if [ -d "~/linuxconfig" ] ; then
+if [ -d ~/linuxconfig ] ; then
     echo "Repository already exist, pulling the latest version..."
     cd ~/linuxconfig
     git pull
