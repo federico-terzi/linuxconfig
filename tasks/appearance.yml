@@ -1,2 +1,0 @@
-- name: Setup wallpaper
-  command: feh --bg-fill ~/linuxconfig/images/background.jpg
