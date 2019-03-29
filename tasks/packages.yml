@@ -52,3 +52,6 @@
 
 - name: Install Slack 
   command: snap install slack --classic 
+
+- name: Install VSCode
+  command: snap install vscode --classic 
