@@ -128,8 +128,10 @@ bindsym $mod+F1 exec --no-startup-id redshift -O 3000
 bindsym $mod+F2 exec --no-startup-id redshift -O 4000
 bindsym $mod+q exec --no-startup-id google-chrome
 bindsym $mod+F12 exec --no-startup-id google-chrome --incognito && pactl set-sink-volume 0 10%
-bindsym $mod+F6 exec --no-startup-id telegram-desktop
-bindsym $mod+F7 exec --no-startup-id thunar
+bindsym $mod+F9 exec --no-startup-id telegram-desktop
+bindsym $mod+F10 exec --no-startup-id thunar
+bindsym $mod+F5 exec --no-startup-id xdg-open https://mail.google.com/mail/u/0/
+bindsym $mod+F6 exec --no-startup-id xdg-open https://calendar.google.com/calendar/r
 bindsym $mod+space exec ~/linuxconfig/script/i3-keyboard-layout cycle us it
 
 # resize window (you can also use the mouse for that)
@@ -161,7 +163,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status | ~/linuxconfig/script/i3-keyboard-layout i3status
+        #status_command i3status | ~/linuxconfig/script/i3-keyboard-layout i3status
+        status_command /home/freddy/projects/thunderbar/thunderbar
 }
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -175,7 +178,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Specific monitor setup
-exec --no-startup-id ~/.setupmonitor.sh
+exec_always --no-startup-id ~/.setupmonitor.sh
 
 exec_always --no-startup-id feh --bg-fill ~/linuxconfig/images/background.jpg
 
