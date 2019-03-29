@@ -3,6 +3,12 @@
     state: absent
     path: "~/.config/i3/config"
 
+- name: Create i3 config folder
+  file: 
+    path: "~/.config/i3"
+    recurse: yes
+    state: directory
+
 - name: Create i3 symbolic link
   file:
     src: "~/linuxconfig/config/i3config"
