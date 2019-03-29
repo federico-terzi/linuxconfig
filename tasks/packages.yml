@@ -29,7 +29,9 @@
   get_url:
     url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     dest: "~/Downloads/chrome.deb"
-
+    owner: freddy
+    group: freddy
+ 
 - name: Install google chrome
   apt:
     deb: "~/Downloads/chrome.deb"
@@ -43,7 +45,9 @@
     src: "~/linuxconfig/script/gimp"
     dest: "/usr/local/bin/gimp"
     mode: "a+x"
-
+    owner: freddy
+    group: freddy
+ 
 - name: Install telegram desktop
   command: snap install telegram-desktop
 
