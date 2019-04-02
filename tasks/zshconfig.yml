@@ -3,7 +3,9 @@
     url: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
     dest: "/tmp/installzsh.sh"
     mode: "a+x"
-
+    owner: freddy
+    group: freddy
+ 
 - name: Install Oh My SH
   command: sh /tmp/installzsh.sh
 
@@ -20,6 +22,8 @@
     src: "~/linuxconfig/config/zshrc"
     dest: "~/.zshrc"
     state: link
-
+    owner: freddy
+    group: freddy
+ 
 - name: Set ZSH as the default shell
   shell: "chsh -s /bin/zsh freddy"

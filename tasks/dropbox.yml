@@ -1,6 +1,8 @@
 - name: Download dropbox distribution
   get_url:
     url: https://www.dropbox.com/download?plat=lnx.x86_64
+    owner: freddy
+    group: freddy
     dest: "~/Downloads/dropbox.tar.gz"
 
 - name: Unzip dropbox distribution
@@ -15,6 +17,8 @@
   get_url:
     url: https://www.dropbox.com/download?dl=packages/dropbox.py
     dest: /usr/local/bin/dropbox
+    owner: freddy
+    group: freddy
     mode: a+x
 
 - name: Remove previous dropbox link

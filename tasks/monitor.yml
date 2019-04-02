@@ -12,3 +12,11 @@
     mode: "a+x"
     state: "link"
   when: "'BOLOGNA' in ansible_env"
+
+- name: Configuring Sangiovanni monitor configuration
+  file:
+    src: "~/linuxconfig/script/screenlayoutsangio.sh"
+    dest: "~/.setupmonitor.sh"
+    mode: "a+x"
+    state: "link"
+  when: "'SANGIO' in ansible_env"

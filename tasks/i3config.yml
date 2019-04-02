@@ -3,11 +3,22 @@
     state: absent
     path: "~/.config/i3/config"
 
+- name: Create i3 config folder
+  file: 
+    path: "~/.config/i3"
+    recurse: yes
+    owner: freddy
+    group: freddy
+    state: directory
+
 - name: Create i3 symbolic link
   file:
     src: "~/linuxconfig/config/i3config"
     dest: "~/.config/i3/config"
     state: link
+    owner: freddy
+    group: freddy
+ 
 
 - name: Remove previous i3status configuration
   file:
@@ -19,13 +30,17 @@
     path: "~/.config/i3status"
     recurse: yes
     state: directory
-
+    owner: freddy
+    group: freddy
+ 
 - name: Create i3 status symbolic link
   file:
     src: "~/linuxconfig/config/i3status"
     dest: "~/.config/i3status/config"
     state: link
-
+    owner: freddy
+    group: freddy
+ 
 - name: Install patch for intel backlight
   file:
     src: "~/linuxconfig/config/xorg.conf"

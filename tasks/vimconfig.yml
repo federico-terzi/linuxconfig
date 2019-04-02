@@ -8,3 +8,6 @@
     src: "~/linuxconfig/config/vimrc"
     dest: "~/.vimrc"
     state: link
+    owner: freddy
+    group: freddy
+ 
