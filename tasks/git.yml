@@ -1,0 +1,6 @@
+- name: Configure git email
+  command: git config --global user.email "federicoterzi96@gmail.com"
+
+- name: Configure git name
+  command: git config --global user.name "Federico Terzi"
+

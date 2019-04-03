@@ -41,6 +41,8 @@ nmcli d wifi connect "WIFINAME" password "PASSWORD"
 
 ## Setup wifi TPLink Archer T9E
 
+**Important:** this setup should not be necessary because the driver for this card can be installed much easier by checking the `Install third-party software for graphics and Wi-Fi hardware...` checkbox during the Xubuntu installation.
+
 In order to setup the TPLink Archer T9E Wifi Card, you need a valid internet connection.
 To do so I set up a router in WDS mode to convert the Wifi signal into ethernet.
 
