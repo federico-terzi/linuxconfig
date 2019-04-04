@@ -59,3 +59,9 @@
 
 - name: Install VSCode
   command: snap install vscode --classic 
+
+- name: Install scrot
+  apt: name=scrot
+
+- name: Install xclip
+  apt: name=xclip

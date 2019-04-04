@@ -133,6 +133,7 @@ bindsym $mod+F10 exec --no-startup-id thunar
 bindsym $mod+F5 exec --no-startup-id xdg-open https://mail.google.com/mail/u/0/
 bindsym $mod+F6 exec --no-startup-id xdg-open https://calendar.google.com/calendar/r
 bindsym $mod+space exec ~/linuxconfig/script/i3-keyboard-layout cycle us it
+bindsym --release $mod+Shift+s exec --no-startup-id scrot -s /tmp/screen.png && xclip /tmp/screen.png -selection clipboard -t image/png
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
