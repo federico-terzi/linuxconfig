@@ -1,0 +1,20 @@
+- name: Remove previous Thunar bookmarks
+  file: 
+    state: absent
+    path: "~/.config/gtk-3.0/bookmarks"
+
+- name: Create gtk config folder if missing
+  file:
+    path: "~/.config/gtk-3.0"
+    recurse: yes
+    owner: freddy
+    group: freddy
+    state: directory
+
+- name: Install Thunar bookmarks
+  file:
+    path: "~/linuxconfig/config/gtkbookmarks"
+    dest: "~/.config/gtk-3.0/bookmarks"
+    state: link
+    owner: freddy
+    group: freddy

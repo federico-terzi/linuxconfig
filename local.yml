@@ -14,3 +14,4 @@
     - include: tasks/monitor.yml
     - include: tasks/appearance.yml
     - include: tasks/git.yml
+    - include: tasks/thunar.yml
