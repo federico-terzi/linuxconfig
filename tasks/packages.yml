@@ -47,6 +47,18 @@
     mode: "a+x"
     owner: freddy
     group: freddy
+
+- name: Install inkscape
+  flatpak:
+    name: https://flathub.org/repo/appstream/org.inkscape.Inkscape.flatpakref
+
+- name: Create inkscape launcher
+  copy:
+    src: "~/linuxconfig/script/inkscape"
+    dest: "/usr/local/bin/inkscape"
+    mode: "a+x"
+    owner: freddy
+    group: freddy
  
 - name: Install telegram desktop
   command: snap install telegram-desktop
