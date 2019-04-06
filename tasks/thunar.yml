@@ -13,7 +13,7 @@
 
 - name: Install Thunar bookmarks
   file:
-    path: "~/linuxconfig/config/gtkbookmarks"
+    src: "~/linuxconfig/config/gtkbookmarks"
     dest: "~/.config/gtk-3.0/bookmarks"
     state: link
     owner: freddy
