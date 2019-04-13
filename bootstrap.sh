@@ -19,7 +19,7 @@ echo "Getting the repository..."
 if [ -d ~/linuxconfig ] ; then
     echo "Repository already exist, pulling the latest version..."
     cd ~/linuxconfig
-    git pull
+    sudo -u freddy git pull
     cd ..
 else
     git clone https://github.com/federico-terzi/linuxconfig.git
