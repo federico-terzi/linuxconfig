@@ -164,6 +164,18 @@ sudo apt install lxappearance
 Then we can select another theme, for example `Adawaita-dark`, and another
 icon theme, for example `elementary Xfce`.
 
+# Setup Insync
+
+To install Insync, visit the [download page](https://www.insynchq.com/downloads) and download the deb package.
+
+Then, navigate to the download folder and install the package:
+
+```
+sudo dpkg -i insync*.deb
+```
+
+At this point, start the Insync desktop app and finish the configuration.
+
 # Setup ZSH
 
 In order to setup zsh, we have to install it first:
