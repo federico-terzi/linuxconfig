@@ -70,7 +70,7 @@
   command: snap install slack --classic 
 
 - name: Install VSCode
-  command: snap install vscode --classic 
+  command: snap install code --classic
 
 - name: Install scrot
   apt: name=scrot
