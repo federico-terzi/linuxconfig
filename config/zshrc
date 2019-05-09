@@ -100,3 +100,5 @@ prompt_context() {}
 chpwd() {
     pwd > /tmp/lastcmddir 
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

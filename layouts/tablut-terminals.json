@@ -1,0 +1,81 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 458,
+               "width": 814,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal - freddy@freddy-Z370-HD3P: ~/projects/osarracino",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Xfce4\\-terminal$",
+               "title": "*osarracino$"
+               }
+            ],
+            "type": "con"
+        }
+        
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 458,
+               "width": 814,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal - freddy@freddy-Z370-HD3P: ~/projects/osarracino",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Xfce4\\-terminal$",
+               "title": "*osarracino$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 458,
+               "width": 814,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Terminal - freddy@freddy-Z370-HD3P: ~/projects/TablutCompetition/Tablut",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Xfce4\\-terminal$",
+               "title": "*TablutCompetition\\/Tablut$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
