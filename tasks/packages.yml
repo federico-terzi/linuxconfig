@@ -88,3 +88,6 @@
  
 - debug:
     msg: "Remember to run ~/.fzf/install to finish FZF installation" 
+
+- name: Install ranger
+  apt: name=ranger
