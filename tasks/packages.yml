@@ -91,3 +91,6 @@
 
 - name: Install ranger
   apt: name=ranger
+
+- name: Install yank
+  apt: name=yank
