@@ -94,3 +94,13 @@
 
 - name: Install yank
   apt: name=yank
+
+- name: Download bat 
+  get_url:
+    url: "https://github.com/sharkdp/bat/releases/download/v0.10.0/bat_0.10.0_amd64.deb" 
+    dest: "~/Downloads/bat.deb"
+    owner: freddy
+    group: freddy
+ 
+- name: Install bat
+  apt: deb="~/Downloads/bat.deb"
