@@ -102,3 +102,9 @@ chpwd() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+.  ~/anaconda3/etc/profile.d/conda.sh
+
+# Install ruby gems to ~/opt/gems
+export GEM_HOME="$HOME/opt/gems"
+export PATH="$HOME/opt/gems/bin:$PATH"
