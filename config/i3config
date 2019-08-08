@@ -88,7 +88,7 @@ bindsym $mod+Shift+space floating toggle
 #bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -135,6 +135,8 @@ bindsym $mod+F5 exec --no-startup-id xdg-open https://mail.google.com/mail/u/0/
 bindsym $mod+F6 exec --no-startup-id xdg-open https://calendar.google.com/calendar/r
 bindsym $mod+space exec ~/linuxconfig/script/i3-keyboard-layout cycle us it
 bindsym --release $mod+Shift+s exec --no-startup-id scrot -s /tmp/screen.png && xclip /tmp/screen.png -selection clipboard -t image/png
+
+bindsym $mod+a exec --no-startup-id python ~/linuxconfig/script/nextworkspaceinmonitor.py
 
 bindsym $mod+F7 exec ~/linuxconfig/script/launchdocs.sh
 bindsym $mod+F8 exec ~/linuxconfig/script/launchscript.sh
