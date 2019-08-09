@@ -139,6 +139,8 @@ bindsym --release $mod+Shift+s exec --no-startup-id scrot -s /tmp/screen.png && 
 bindsym $mod+a exec --no-startup-id python ~/linuxconfig/script/nextworkspaceinmonitor.py
 bindsym $mod+Shift+a exec --no-startup-id python ~/linuxconfig/script/prevworkspaceinmonitor.py
 bindsym $mod+z exec --no-startup-id python ~/linuxconfig/script/newworkspace.py
+bindsym $mod+Control+Left exec --no-startup-id python ~/linuxconfig/script/switchallmonitorworkspaces.py prev
+bindsym $mod+Control+Right exec --no-startup-id python ~/linuxconfig/script/switchallmonitorworkspaces.py next
 
 bindsym $mod+F7 exec ~/linuxconfig/script/launchdocs.sh
 bindsym $mod+F8 exec ~/linuxconfig/script/launchscript.sh
