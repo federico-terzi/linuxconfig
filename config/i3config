@@ -137,6 +137,8 @@ bindsym $mod+space exec ~/linuxconfig/script/i3-keyboard-layout cycle us it
 bindsym --release $mod+Shift+s exec --no-startup-id scrot -s /tmp/screen.png && xclip /tmp/screen.png -selection clipboard -t image/png
 
 bindsym $mod+a exec --no-startup-id python ~/linuxconfig/script/nextworkspaceinmonitor.py
+bindsym $mod+Shift+a exec --no-startup-id python ~/linuxconfig/script/prevworkspaceinmonitor.py
+bindsym $mod+z exec --no-startup-id python ~/linuxconfig/script/newworkspace.py
 
 bindsym $mod+F7 exec ~/linuxconfig/script/launchdocs.sh
 bindsym $mod+F8 exec ~/linuxconfig/script/launchscript.sh
