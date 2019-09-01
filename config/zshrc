@@ -107,4 +107,4 @@ chpwd() {
 
 # Install ruby gems to ~/opt/gems
 export GEM_HOME="$HOME/opt/gems"
-export PATH="$HOME/opt/gems/bin:$PATH"
+export PATH="$HOME/opt/gems/bin:$HOME/opt/flutter/bin:$HOME/.cargo/bin:$PATH"
