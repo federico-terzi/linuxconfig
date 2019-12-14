@@ -4,6 +4,9 @@
 - name: Install i3
   apt: name=i3
 
+- name: Install Rofi
+  apt: name=rofi
+
 - name: Install xbacklight
   apt: name=xbacklight
 
