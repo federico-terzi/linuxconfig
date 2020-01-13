@@ -45,7 +45,8 @@ bindsym $mod+d exec rofi -show run
 #bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Shift+d exec --no-startup-id rofi -show drun 
 bindsym $mod+Shift+w exec --no-startup-id rofi -show window
-bindsym $mod+c exec --no-startup-id  find . -type d| rofi -dmenu | xargs xdg-open 
+bindsym $mod+c exec --no-startup-id ~/linuxconfig/script/rofi_search.sh dir 
+bindsym $mod+Tab exec --no-startup-id ~/linuxconfig/script/rofi_search.sh vim
 
 # change focus
 bindsym $mod+j focus left
@@ -146,8 +147,8 @@ bindsym $mod+z exec --no-startup-id python ~/linuxconfig/script/newworkspace.py
 bindsym $mod+Control+Left exec --no-startup-id python ~/linuxconfig/script/switchallmonitorworkspaces.py prev
 bindsym $mod+Control+Right exec --no-startup-id python ~/linuxconfig/script/switchallmonitorworkspaces.py next
 
-bindsym $mod+F7 exec ~/linuxconfig/script/launchdocs.sh
-bindsym $mod+F8 exec ~/linuxconfig/script/launchscript.sh
+bindsym $mod+F8 exec ~/linuxconfig/script/rofi_search.sh docs
+bindsym $mod+F7 exec ~/linuxconfig/script/rofi_search.sh script 
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
