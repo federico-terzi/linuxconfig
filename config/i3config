@@ -47,6 +47,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 bindsym $mod+c exec --no-startup-id ~/linuxconfig/script/rofi_search.sh dir 
 bindsym $mod+Tab exec --no-startup-id ~/linuxconfig/script/rofi_search.sh vim
+bindsym $mod+o exec --no-startup-id ~/linuxconfig/script/rofi_search.sh open
 
 # change focus
 bindsym $mod+j focus left
