@@ -133,6 +133,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+F1 exec --no-startup-id redshift -x
 bindsym $mod+F1 exec --no-startup-id redshift -O 3000
 bindsym $mod+F2 exec --no-startup-id redshift -O 4000
+bindsym $mod+F3 exec --no-startup-id ~/linuxconfig/script/monitor_control.sh single
+bindsym $mod+F4 exec --no-startup-id ~/linuxconfig/script/monitor_control.sh double
 bindsym $mod+q exec --no-startup-id google-chrome
 bindsym $mod+F12 exec --no-startup-id google-chrome --incognito && pactl set-sink-volume 0 10%
 bindsym $mod+F9 exec --no-startup-id telegram-desktop
