@@ -15,7 +15,7 @@
 
 - name: Configuring Sangiovanni monitor configuration
   file:
-    src: "~/linuxconfig/script/screenlayoutsangio2.sh"
+    src: "~/linuxconfig/script/screenlayoutsangio4.sh"
     dest: "~/.setupmonitor.sh"
     mode: "a+x"
     state: "link"
